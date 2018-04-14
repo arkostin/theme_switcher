@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+feh --bg-scale ~/Desktop/4chin/fa/effay/wp34.jpg
+synclient MaxTapTime=0

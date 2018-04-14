@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Script to change the rice dotfiles to the files at ~/theme_switches/conf0
+rm -rf ~/.config/i3
+rm -rf ~/.config/polybar
+cp -r ~/theme_switcher/conf1/i3 ~/.config
+cp -r ~/theme_switcher/conf1/polybar ~/.config
+~/theme_switcher/conf1/i3/desktop_wp
+dconf write /org/gnome/terminal/legacy/profiles:/default "'2fb563a9-cd99-4aba-93b1-25dde3866ea3'"
+i3-msg restart
+nohup ~/.config/polybar/launch.sh

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script to change the rice dotfiles to the files at ~/theme_switches/conf0
+rm -rf ~/.config/i3
+rm -rf ~/.config/polybar
+cp -r ~/theme_switcher/conf0/i3 ~/.config
+cp -r ~/theme_switcher/conf0/polybar ~/.config
+~/theme_switcher/conf0/i3/desktop_wp
+i3-msg restart
