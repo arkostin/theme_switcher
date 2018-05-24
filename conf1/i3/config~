@@ -182,7 +182,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 
 bindsym $mod+Shift+w exec firefox
-bindsym $mod+Shift+Control+w exec google-chrome --incognito
+bindsym $mod+Shift+Control+w exec firefox --private
 
 #GAPS 
 gaps inner 4
@@ -192,10 +192,9 @@ gaps outer 0
 bindsym $mod+q exec --no-startup-id .config/polybar/launch.sh
 bindsym $mod+Shift+Control+l exec ~/lock.sh
 
+exec ~/.config/i3/compton_start
 exec --no-startup-id .config/polybar/launch.sh
 
-exec xcompmgr
-exec feh --bg-scale ~/Desktop/4chin/fa/effay/wp18.jpg
 exec synclient MaxTapTime=0
 
 #xset s off

@@ -5,6 +5,7 @@ rm -rf ~/.config/polybar
 cp -r ~/theme_switcher/conf0/i3 ~/.config
 cp -r ~/theme_switcher/conf0/polybar ~/.config
 ~/theme_switcher/conf0/i3/desktop_wp
+killall compton
 dconf write /org/gnome/terminal/legacy/profiles:/default "'c3c9aabb-278b-4d76-a382-e0b1e27d536c'"
 i3-msg restart
 nohup ~/.config/polybar/launch.sh

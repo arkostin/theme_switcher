@@ -185,7 +185,7 @@ bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+Control+w exec firefox --private
 
 #GAPS 
-gaps inner 4
+gaps inner 20
 gaps outer 0
 #smart_gaps on
 
@@ -193,9 +193,10 @@ bindsym $mod+q exec --no-startup-id .config/polybar/launch.sh
 bindsym $mod+Shift+Control+l exec ~/lock.sh
 
 exec --no-startup-id .config/polybar/launch.sh
+exec ~/theme_switcher/conf2/i3/desktop_wp
+exec killall compton
+exec nohup ~/.config/i3/compton_start
 
-exec xcompmgr
-exec feh --bg-scale ~/Desktop/4chin/fa/effay/wp18.jpg
 exec synclient MaxTapTime=0
 
 #xset s off

@@ -193,9 +193,10 @@ bindsym $mod+q exec --no-startup-id .config/polybar/launch.sh
 bindsym $mod+Shift+Control+l exec ~/lock.sh
 
 exec --no-startup-id .config/polybar/launch.sh
+exec ~/.config/i3/desktop_wp
+exec killall compton
+exec ~/.config/i3/compton_start
 
-exec xcompmgr
-exec feh --bg-scale ~/Desktop/4chin/fa/effay/wp18.jpg
 exec synclient MaxTapTime=0
 
 #xset s off

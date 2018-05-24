@@ -19,7 +19,7 @@ font pango:System San Francisco Display 10
 #font pango:DejaVu Sans Mono 8
 
 hide_edge_borders both
-new_window none
+new_window pixel 4
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -164,8 +164,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #FF4694
-set $inactive-bg-color   #FF4694
+set $bg-color 	         #b2ffff
+set $inactive-bg-color   #59afaf
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
@@ -187,13 +187,13 @@ bindsym $mod+Shift+Control+w exec firefox --private
 #GAPS 
 gaps inner 20
 gaps outer 0
-#smart_gaps on
+smart_gaps on
 
 bindsym $mod+q exec --no-startup-id .config/polybar/launch.sh
 bindsym $mod+Shift+Control+l exec ~/lock.sh
 
 exec --no-startup-id .config/polybar/launch.sh
-exec ~/.config/i3/desktop_wp
+exec ~/theme_switcher/conf2/i3/desktop_wp
 exec killall compton
 exec nohup ~/.config/i3/compton_start
 

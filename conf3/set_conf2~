@@ -6,8 +6,7 @@ cp -r ~/theme_switcher/conf2/i3 ~/.config
 cp -r ~/theme_switcher/conf2/polybar ~/.config
 ~/theme_switcher/conf2/i3/desktop_wp
 dconf write /org/gnome/terminal/legacy/profiles:/default "'19357d78-2761-4182-8372-299dfa693375'"
-killall compton
-nohup ~/.config/polybar/launch.sh
-nohup ~/.config/i3/compton_start
-sleep 1
 i3-msg restart
+nohup ~/.config/polybar/launch.sh
+killall compton
+nohup ~/.config/i3/compton_start

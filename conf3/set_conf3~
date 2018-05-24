@@ -2,10 +2,10 @@
 # Script to change the rice dotfiles to the files at ~/theme_switches/conf0
 rm -rf ~/.config/i3
 rm -rf ~/.config/polybar
-cp -r ~/theme_switcher/conf2/i3 ~/.config
-cp -r ~/theme_switcher/conf2/polybar ~/.config
-~/theme_switcher/conf2/i3/desktop_wp
-dconf write /org/gnome/terminal/legacy/profiles:/default "'19357d78-2761-4182-8372-299dfa693375'"
+cp -r ~/theme_switcher/conf3/i3 ~/.config
+cp -r ~/theme_switcher/conf3/polybar ~/.config
+~/.config/i3/desktop_wp
+dconf write /org/gnome/terminal/legacy/profiles:/default "'0aa8adbd-a757-4a4b-94b8-c04342fd6116'"
 killall compton
 nohup ~/.config/polybar/launch.sh
 nohup ~/.config/i3/compton_start
