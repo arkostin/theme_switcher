@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+# Script to change the rice dotfiles
+THEME=$1
+rm -rf ~/.config/i3
+rm -rf ~/.config/polybar
+sudo cp -r ~/theme_switcher/conf$THEME/i3 ~/.config
+sudo cp -r ~/theme_switcher/conf$THEME/polybar ~/.config
+~/theme_switcher/conf$THEME/i3/desktop_wp
+killall compton
+i3-msg restart
+nohup ~/.config/polybar/launch.sh
+nohup ~/.config/i3/compton_start
